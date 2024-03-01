@@ -49,6 +49,7 @@ function App() {
           <Route path='user/order' element={<Order />} />
 
         </Route>
+
         <Route path='/dashboard' element={<AdminPrivate />}>
           <Route path='admin' element={<AdminDashboard />} />
           <Route path='admin/statics' element={<Statics />} />

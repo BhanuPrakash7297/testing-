@@ -4,7 +4,7 @@
 /* 
 @tailwind base;
 @tailwind components;
-@tailwind utilities; */ */
+@tailwind utilities; */
 /* font-family: 'Poppins',
 sans-serif;
 
@@ -12,6 +12,7 @@ sans-serif;
 serif;
 font-family: 'Poppins',
 sans-serif; */
+
 *{
   margin:0;
   padding:0;

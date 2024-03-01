@@ -9,14 +9,12 @@ import Spinner from '../Spinner';
 function AdminPrivate() {
 
     const [ok, setOk] = useState(false);
-    const [auth, setAuth] = useAuth();
+    const [auth] = useAuth();
 
-    console.log("auth", auth);
     useEffect(() => {
         const authCheck = async () => {
             try {
                 const res = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/admin-auth`);
-                console.log(res);
                 if (res.data.ok) setOk(true);
                 else setOk(false)
             }

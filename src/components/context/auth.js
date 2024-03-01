@@ -1,10 +1,10 @@
 
 
 import axios from "axios";
-import { useState, Context, createContext, useEffect, useContext } from "react";
+import { useState, createContext, useEffect, useContext } from "react";
 
 
-const AuthContext = createContext();// create a contex object
+const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState({
@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
 
         const data = sessionStorage.getItem(`auth`);
-        console.log("data", data);
+
         if (data) {
             const parseData = JSON.parse(data);
 

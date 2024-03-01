@@ -8,6 +8,7 @@ import { SearchProvider } from './components/context/SearchContext';
 import { CartProvider } from './components/context/cartContext';
 import { CategoriesProvider } from './components/context/categoryContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <AuthProvider>
     <CategoriesProvider>
@@ -17,8 +18,6 @@ root.render(
           <BrowserRouter>
             <App />
           </BrowserRouter>
-
-
         </SearchProvider>
       </CartProvider>
     </CategoriesProvider>

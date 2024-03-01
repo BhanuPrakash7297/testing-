@@ -18,7 +18,9 @@ function CategoriesProvider({ children }) {
             }).catch((error) => {
                 console.error('Error fetching categories:', error);
             });
+        // eslint-disable-next-line
     }, []);
+
 
     return (
 
@@ -28,7 +30,6 @@ function CategoriesProvider({ children }) {
     );
 }
 
-// cusotom hooks
 
 const useCategories = () => useContext(CategoriesContext);
 

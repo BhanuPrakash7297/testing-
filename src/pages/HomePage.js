@@ -11,8 +11,7 @@ import './../styles/homePage.css'
 const HomePage = () => {
     const [product, setProduct] = useState([]);
 
-    // const [categories, setCategories] = useState([]);
-    const [categories, setCategories] = useCategories();
+    const [categories] = useCategories();
     const [checked, setChecked] = useState([]);
     const [radio, setRadio] = useState([]);
     const [total, setTotal] = useState(0);
@@ -20,54 +19,36 @@ const HomePage = () => {
     const [loading, setLoading] = useState(false);
 
     const [cart, setCart] = useCart();
-    // get products
+
 
     const navigate = useNavigate();
+
     const checkCart = async (p, id) => {
         try {
             const myCart = [...cart];
             let check = -1;
             if (myCart) {
-                console.log(id);
                 check = myCart.findIndex((item) => item._id === id);
-                console.log("check", check);
             }
 
-            console.log(myCart, check);
-
             if (check === -1) {
-                console.log("helll0")
                 setCart([...cart, p]);
                 localStorage.setItem('cart', JSON.stringify([...cart]));
                 toast.success("Product added in cart successfully");
             }
+
             else {
                 toast.error("Product is already in cart go and check");
             }
-        } catch (err) {
+
+        }
+        catch (err) {
             console.log(err);
         }
-
     }
 
 
-    // const getAllCategories = async () => {
-    //     try {
-    //         const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/category/allcategory`);
-
-    //         if (data?.success) {
-    //             setCategories(data.allCategory);
-    //         }
-
-    //     }
-    //     catch (err) {
-    //         console.log(err);
-    //         toast.error('something went wrong');
-    //     }
-    // }
-
     useEffect(() => {
-        // getAllCategories();
         totalCount();
     }, []);
 
@@ -86,12 +67,6 @@ const HomePage = () => {
             toast.error('Something Went wWrong ');
         }
     }
-    // useEffect(() => {
-    //     GetAllProduct();
-    //     // eslint-disable-next-line
-    // }, [page]);
-
-
 
     //get filterd product
     const filterProduct = async () => {
@@ -105,9 +80,9 @@ const HomePage = () => {
             console.log(error);
         }
     };
+
     useEffect(() => {
         if (!checked.length || !radio.length) GetAllProduct();
-
     }, [checked.length, radio.length]);
 
 
@@ -115,6 +90,7 @@ const HomePage = () => {
         if (checked.length || radio.length) filterProduct();
 
     }, [checked, radio]);
+
 
     const totalCount = async () => {
         try {
@@ -155,6 +131,7 @@ const HomePage = () => {
 
 
     const FilterHandler = (value, id) => {
+        console.log(value, id);
         let all = [...checked];
 
         if (value) {
@@ -168,32 +145,24 @@ const HomePage = () => {
         console.log(all);
     };
 
-
-
     return (
         <Layout title={"All Product-Best Offers"}>
             {/* banner image */}
-            <img
-                src="/images/banner.png"
-                className="banner-img"
-                alt="bannerimage"
-                width={"100%"}
-            />
+            <div className='banner-wrapper'>
+                <img
+                    src="/images/banner.jpg"
+                    className="banner-img"
+                    alt="bannerimage"
+                    width={"100%"}
+                />
+            </div>
+
             {/* banner image */}
 
             <div className='row mt-3'>
                 <div className='col-md-3'>
-                    <h4 className='text-center'>Filter by category</h4>
-                    <div className='d-flex flex-column'>
-                        {
-                            categories?.map((e) => (
-                                <Checkbox key={e._id} onChange={(t) => FilterHandler(t.target.checked, e._id)}>
-                                    {e.name}
-                                </Checkbox>
-                            ))
-                        }
-                    </div>
-                    <h4 className='text-center mt-3'>Filter by category</h4>
+
+                    <h4 className='text-center'>Filter By Price</h4>
                     <div className='d-flex flex-column'>
                         {
                             <Radio.Group onChange={(e) => { setRadio(e.target.value) }}>
@@ -206,7 +175,18 @@ const HomePage = () => {
                                 }
                             </Radio.Group>
                         }
+                    </div>
 
+
+                    <h4 className='text-center mt-5'>Filter by category</h4>
+                    <div className='d-flex flex-column p-3'>
+                        {
+                            categories?.map((e) => (
+                                <Checkbox key={e._id} onChange={(t) => FilterHandler(t.target.checked, e._id)} className="py-1">
+                                    {e.name}
+                                </Checkbox>
+                            ))
+                        }
                     </div>
                     <div className='d-flex flex-column'>
                         <button className='btn btn-danger' onClick={() => window.location.reload(true)}>Reset Filters</button>

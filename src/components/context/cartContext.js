@@ -24,6 +24,7 @@ const CartProvider = ({ children }) => {
 
 
 const useCart = () => useContext(CartContext);
+
 export { useCart, CartProvider };
 
 

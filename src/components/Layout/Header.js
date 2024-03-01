@@ -8,12 +8,12 @@ import { useCart } from '../context/cartContext';
 import { Badge } from "antd";
 import { useCategories } from '../context/categoryContext';
 const Header = () => {
-    const [auth, setAuth] = useAuth();
-    const [cart, setCart] = useCart();
-    // const categories = useCategory();
-    const [categories, setCategories] = useCategories();
 
-    console.log("categoreids dfldjlfjdlfldjfdlf", categories);
+    const [auth, setAuth] = useAuth();
+    const [cart] = useCart();
+    // const categories = useCategory();
+    const [categories] = useCategories();
+
     const handleLogout = () => {
         setAuth({
             ...auth,
@@ -22,9 +22,7 @@ const Header = () => {
         });
         toast.success('Logged out succesfully');
         sessionStorage.removeItem('auth');
-
     }
-
 
     return (
         <>
@@ -116,8 +114,6 @@ const Header = () => {
                                     </Badge>
                                 </NavLink>
                             </li>
-
-
                         </ul>
                     </div>
                 </div>
