@@ -228,7 +228,7 @@ const HomePage = () => {
                                     e.preventDefault();
                                     setPage(page + 1);
                                 }}
-                            >{loading ? "Loading" : "LodeMore"}
+                            >{loading ? "Loading" : "LoadMore"}
                             </button>
                         )}
                     </div>
