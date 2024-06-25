@@ -1,0 +1,190 @@
+.edu-card-2 {
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    position: relative;
+    background-color: var(--text-clr);
+    color: var(--bg-color);
+  }
+  .edu-course-area .container {
+    margin: 0 58px;
+    max-width: 90%;
+    margin: auto;
+  }
+  .edu-card-2 .thumbnail {
+    position: relative;
+  }
+  .edu-card-2 .thumbnail a {
+    border-radius: 3px;
+  }
+  .edu-card-2 .thumbnail a img {
+    width: 365px;
+    transition: 0.4s;
+    overflow: hidden;
+    object-fit: cover;
+    height: 266px;
+  }
+  .edu-card-2:hover .thumbnail a img {
+    transform: scale(1.1);
+  }
+  .wishlist-top-right .wishlist-btn,
+  .edu-card-2 .card-hover-action .content-top .wishlist-btn {
+    backdrop-filter: blur(10px);
+    background-color: rgba(45, 40, 78, 0.2);
+    border: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  .edu-card-2 .card-hover-action .content-top .wishlist-btn.love,
+  .wishlist-top-right .wishlist-btn.love {
+    color: #0ef9d8;
+  }
+  .edu-card-2 .thumbnail .status-group {
+    bottom: -12px;
+    left: 30px;
+    top: auto;
+    z-index: 0;
+  }
+  .edu-card-2 .thumbnail .status-group a {
+    background-color: #525fe1;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    line-height: 30px;
+    padding: 0 15px;
+    height: 34px;
+  }
+  .edu-card-2 .inner .content {
+    padding: 44px 27px 30px;
+  }
+  .edu-card-2 .inner .content .card-top,
+  .edu-card-2 .card-hover-action .hover-content .hover-bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .edu-card-2 .inner .content .card-top .author-meta img,
+  .edu-card-2
+    .card-hover-action
+    .hover-content
+    .hover-bottom-content
+    .author-meta
+    img {
+    border-radius: 50%;
+    max-height: 34px;
+    margin-right: 10px;
+  }
+  .edu-card-2 .inner .content .card-top .author-meta .author-title,
+  .edu-card-2
+    .card-hover-action
+    .hover-content
+    .hover-bottom-content
+    .author-meta
+    .author-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    transition: 0.4s;
+  }
+  .edu-meta li svg {
+    color: #525fe1;
+  }
+  .edu-card-2 .inner .content .title,
+  .edu-card-2 .card-hover-action .hover-content .title {
+    font-size: 20px;
+    color: var(--maintext-clr);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .edu-card-2 .inner .content .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    flex-wrap: wrap;
+  }
+  .edu-card-2 .inner .content .card-bottom .price-list .current-pice,
+  .edu-card-2 .card-hover-action .hover-content .price-list .current-pice {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .edu-card-2 .inner .content .card-bottom .price-list .current-pice {
+    color: var(--bg-color);
+  }
+  .edu-card-2 .inner .content .card-bottom .rating-icon .rating-count {
+    color: var(--bg-color);
+  }
+  .edu-card-2 .card-hover-action {
+    background-color: #525fe1;
+    border-radius: 5px;
+    box-shadow: 0 12px 30px rgba(82, 95, 225, 0.1);
+    height: 100%;
+    padding: 30px;
+    width: 100%;
+    transition: 0.4s;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .edu-card-2:hover .card-hover-action {
+    opacity: 1;
+  }
+  .edu-card-2 .card-hover-action .content-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .edu-card-2 .card-hover-action .hover-content .title {
+    color: #fff;
+  }
+  .edu-card-2 .card-hover-action .content-top .top-status-bar a {
+    background: hsla(0, 0%, 100%, 0.15);
+    height: 34px;
+    padding: 0 15px;
+    display: inline-block;
+    line-height: 34px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  .edu-card-2 .card-hover-action .hover-content .description {
+    color: hsla(0, 0%, 100%, 0.8);
+    margin-bottom: 20px;
+  }
+  .edu-card-2 .card-hover-action .hover-content .price-list {
+    margin-bottom: 20px;
+  }
+  .edu-card-2
+    .card-hover-action
+    .hover-content
+    .hover-bottom-content
+    .edu-meta
+    li
+    svg {
+    color: #fff;
+  }
+  .read-more-btn a {
+    color: #525fe1 !important;
+    background-color: #fff;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.4s;
+  }
+  .edu-card-2 .card-hover-action .hover-content .hover-bottom-content {
+    margin-bottom: 30px;
+  }
+  
