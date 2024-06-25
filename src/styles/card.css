@@ -1,0 +1,129 @@
+
+
+.card-image{
+    width:100%;
+    border-radius:12px;
+}
+
+
+.edu-card.card-type-2 {
+    padding: 20px 20px 30px;
+    background-color: var(--color-shade);
+    color: var(--heading-clr);
+  }
+  .edu-card.card-type-2:hover {
+    background-color: var(--card-bg-hover);
+    color: var(--text-clr);
+  }
+  
+  .eduvibe-status {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 2;
+    margin: -5px;
+  }
+  .eduvibe-status .status-2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 0 2px 2px 0;
+    line-height: 30px;
+    background-color: var(--icon-color);
+    color: #fff;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .wishlist-top-right {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+  }
+  .wishlist-top-right .wishlistbtn {
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    border: none;
+    text-align: center;
+  }
+  .edu-card.card-type-2 .inner .content .card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .author-meta a span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    transition: 0.4s;
+    color: var(--heading-clr);
+  }
+  
+  .icon {
+    color: orange;
+  }
+  
+  .edu-card.card-type-2 .inner .content .title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--heading-clr);
+  }
+  .edu-card.card-type-2:hover .inner .content .title,
+  .author-meta a span {
+    color: var(--title-color);
+  }
+  .edu-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  .edu-meta li {
+    align-items: center;
+    margin: 0 20px;
+    display: flex;
+    line-height: 26px;
+    font-weight: 500;
+    gap: 12px;
+  }
+  .edu-card.card-type-2 .inner .content .card-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    justify-content: space-between;
+  }
+  .edu-card.card-type-2 .inner .content .card-bottom .price-list .current-price {
+    border-radius: 3px;
+    display: inline-block;
+    height: 36px;
+    line-height: 35px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--main-btn-clr);
+    color: #fff;
+  }
+  .outline {
+    font-size: 19px;
+    margin-top: 3px;
+  }
+  .buyButton a {
+    padding: 9px 38px;
+    background-color: var(--main-btn-clr);
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 5px;
+    transition: 0.4s;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
