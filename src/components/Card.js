@@ -35,13 +35,13 @@ const CourseCard = (props) => {
         else {
             toast.error("Product is already in cart go and check");
         }
-
     }
     catch (err) {
         console.log(err);
     }
 }
   
+
   return (
     <div className="col-12 col-sm-12 col-md-6 col-xl-4 col-lg-4">
       <div className="edu-card card-type-2 radius-small " data-aos="fade-up">
